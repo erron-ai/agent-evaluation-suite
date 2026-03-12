@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-evaluation-suite"
+version = "0.1.0"
+description = "Testing harness for completion rate, hallucination rate, cost efficiency, and edge cases."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/agent-evaluation-suite"
+Issues = "https://github.com/erron-ai/agent-evaluation-suite/issues"
+
+[project.scripts]
+agent-evaluation-suite = "agent_evaluation_suite.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
